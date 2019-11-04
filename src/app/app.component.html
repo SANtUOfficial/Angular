@@ -1,0 +1,26 @@
+<div class="page-container">
+  <app-header-menu></app-header-menu>
+  <div class="courses-header">
+    <ul class="breadcrumb">
+      <li><a href="#">Courses</a></li>
+    </ul>
+  </div>
+  <div class="search-container">
+    <input [(ngModel)]="searchValue" type="search" />
+    <button class="search-btn" (click)="fetchResults()">Search</button>
+  </div>
+  <div class="add-course">
+    <button>Add Course</button>
+  </div>
+  <div class="list-container">
+    <app-courses-list
+      [list]="list"
+      *ngFor="let list of lists; index as i"
+      class="list"
+      (deleteItem)="deleteItem($event)"
+    ></app-courses-list>
+  </div>
+
+  <app-footer-section></app-footer-section>
+  <router-outlet></router-outlet>
+</div>
