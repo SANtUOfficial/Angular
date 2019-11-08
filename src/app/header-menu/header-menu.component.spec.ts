@@ -9,7 +9,7 @@ describe('HeaderMenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],,
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [ HeaderMenuComponent ]
     })
     .compileComponents();

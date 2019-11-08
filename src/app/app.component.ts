@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  title = 'Angular-tast1';
+  title = 'Angular-task';
   lists: any
   searchValue: any;
 
