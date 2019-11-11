@@ -7,6 +7,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { FormsModule } from '@angular/forms';
+import { CourseDirectiveDirective } from './directives/course-directive.directive';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderMenuComponent,
     FooterSectionComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    CourseDirectiveDirective
   ],
   imports: [
     BrowserModule,

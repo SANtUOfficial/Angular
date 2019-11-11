@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   fetchResults() {
     console.log(this.searchValue);
   }
+  
   deleteItem(id) {
 
     let obj =this.lists.find(ele=>{
