@@ -8,9 +8,9 @@ describe('CoursesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoursesListComponent ]
+      declarations: [CoursesListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +22,12 @@ describe('CoursesListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit the deleted id', () => {
+
+    const spy = spyOn(component.deleteItem, 'emit');
+    component.delete(0);
+    expect(spy).toHaveBeenCalled();
+  });
+
 });
