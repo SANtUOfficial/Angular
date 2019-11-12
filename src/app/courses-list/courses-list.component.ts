@@ -9,21 +9,28 @@ import { ListType } from '../static-data';
 export class CoursesListComponent implements OnInit {
 
   @Input() list: ListType;
-  @Input() index:number;
+  @Input() index: number;
   @Output() deleteItem = new EventEmitter();
+  public date:Date;
   constructor() { }
 
   ngOnInit() {
-    console.log("Called ngOnInit")
+    this.date = new Date();
   }
 
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("called ngOnChanges")
-   
+
+    let date = changes.list.currentValue.creationDDate
+    let dateDiff = this.getDateDiff(date);
   }
-  delete(id){
-    console.log("delete record");
+
+  getDateDiff(oldDate) {
+    let diff = oldDate.getTime() - this.date.getTime();
+    return diff / (1000 * 3600 * 24);
+  }
+
+  delete(id) {
     this.deleteItem.emit(id);
-    }
+  }
 }
